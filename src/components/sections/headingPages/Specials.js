@@ -5,6 +5,16 @@ import LemonDessert from '../../../assets/food/lemon-dessert.webp';
 import SpecialCard from './CardInfo/SpecialCard';
 
 export default function Specials() {
+    const data =[{
+        imagelink:GreekSalad,
+        title:"Greek Salad",
+        price:"$12.99",
+        discription:"Refreshing salad, made with tomato, lettuce, feta cheese, and olives.Dressed with salt, hot pepper, and olive oil."
+    },{
+        imagelink:Bruschetta,
+        title:"Bruschetta",
+        price:"$15.99",
+        discription:"Fresh baked lemon bread coated in salt and sugar. Powdered in citrus and lemon zest."}]
     return (
         <section className="specials">
             <article className="specials-topbar">
@@ -13,12 +23,21 @@ export default function Specials() {
             </article>
 
             <section className="specials-cards">
-                <SpecialCard image={GreekSalad} name="Greek Salad" price="$12.99" description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
+                {/* <SpecialCard image={GreekSalad} name="Greek Salad" price="$12.99" description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
+                 Dressed with salt, hot pepper, and olive oil."/>
+                 <SpecialCard image={GreekSalad} name="Greek Salad" price="$12.99" description="Refreshing salad, made with tomato, lettuce, feta cheese, and olives.
                  Dressed with salt, hot pepper, and olive oil."/>
                 <SpecialCard image={Bruschetta}name="Bruschetta" price="$16.99" description="Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with
                  salt and olive oil."/>
                 <SpecialCard image={LemonDessert} name="Lemon Dessert" price="$8.50" description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
                  and lemon zest."/>
+                 <SpecialCard image={LemonDessert} name="Lemon Dessert" price="$8.50" description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
+                 and lemon zest."/>
+                 <SpecialCard image={LemonDessert} name="Lemon Dessert" price="$8.50" description="Fresh baked lemon bread coated in salt and sugar. Powdered in citrus
+                 and lemon zest."/> */}
+
+                 {data.map(dataitems=><SpecialCard image={dataitems.imagelink} name={dataitems.title} price={dataitems.price} description={dataitems.discription}/>)}
+
             </section>
 
             <section className="specials-carousel">
